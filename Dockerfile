@@ -13,7 +13,7 @@ RUN apt-get update && \
 
 # install font simhei
 Run wget -P /opt/conda/lib/python3.8/site-packages/matplotlib/mpl-data/fonts/ttf/ --no-check-certificate https://github.com/doushang/jupyter-ex/raw/main/simhei.ttf && \
-    sed -i 's/#font.family/font.family: /g' /opt/conda/lib/python3.8/site-packages/matplotlib/mpl-data/matplotlibrc && \
+    sed -i 's/#font.family:/font.family: /g' /opt/conda/lib/python3.8/site-packages/matplotlib/mpl-data/matplotlibrc && \
     sed -i 's/#axes.unicode_minus: True/axes.unicode_minus: False /g' /opt/conda/lib/python3.8/site-packages/matplotlib/mpl-data/matplotlibrc && \
     sed -i "s/#font.sans-serif:/font.sans-serif: /g" /opt/conda/lib/python3.8/site-packages/matplotlib/mpl-data/matplotlibrc && \
     sed -i "/^font.sans-serif: .*$/s//&, SimHei/g" /opt/conda/lib/python3.8/site-packages/matplotlib/mpl-data/matplotlibrc && \
