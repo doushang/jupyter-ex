@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: install fonts
-        run: mv ./simhei.ttf /home/
+        run: sudo mv ./simhei.ttf /home/
       - name: Build Image
         run: docker build -t ${{ secrets.DOCKER_REPOSITORY }}:latest ./
       - name: Login to registry
