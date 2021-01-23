@@ -11,6 +11,15 @@ USER root
 RUN apt-get update && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
+# install font simhei
+Run 
+    mv simhei.ttf /opt/conda/lib/python3.8/site-packages/matplotlib/mpl-data/fonts/tt && \
+    sed -i 's/#font.family/font.family: /g' /opt/conda/lib/python3.8/site-packages/matplotlib/mpl-data/matplotlibrc && \
+    sed -i 's/#axes.unicode_minus: True/axes.unicode_minus: False /g' /opt/conda/lib/python3.8/site-packages/matplotlib/mpl-data/matplotlibrc && \
+    sed -i "s/#font.sans-serif:/font.sans-serif: /g" /opt/conda/lib/python3.8/site-packages/matplotlib/mpl-data/matplotlibrc && \
+    sed -i "/^font.sans-serif: .*$/s//&, SimHei/g" /opt/conda/lib/python3.8/site-packages/matplotlib/mpl-data/matplotlibrc && \
+    rm -rf /home/jovyan/.cache/matplotlib/*
+
 # Install Python 3 packages
 RUN conda install --quiet --yes \
     'openpyxl=3.0.6' \
