@@ -21,10 +21,12 @@ Run wget -P /opt/conda/lib/python3.8/site-packages/matplotlib/mpl-data/fonts/ttf
 
 # Install Python 3 packages
 RUN conda install --quiet --yes \
-    'openpyxl=3.0.6' \
-    'eventlet=0.30.0' \
-    'pandas=1.2.1' \
-    'xmltodict=0.12.0' \
+    'openpyxl=3.0.*' \
+    'eventlet=0.30.*' \
+    'pandas=1.2.*' \
+    'xmltodict=0.12.*' \
+    'xlwt=1.3.*' \
+    'pymssql=2.1.*' \
     && \
     conda clean --all -f -y && \
     npm cache clean --force && \
