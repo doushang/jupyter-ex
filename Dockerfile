@@ -23,10 +23,8 @@ Run wget -P /opt/conda/lib/python3.8/site-packages/matplotlib/mpl-data/fonts/ttf
 RUN conda install --quiet --yes \
     'openpyxl=3.0.6' \
     'eventlet=0.30.0'\
-    'redis=3.5.3' \
     'pandas=1.2.1' \
     'xmltodict=0.12.0' \
-    'fileutils=0.2.2' \
     && \
     conda clean --all -f -y && \
     npm cache clean --force && \
