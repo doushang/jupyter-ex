@@ -1,5 +1,4 @@
 # jupyter-ex
-based on Jupyter/DataScience-Notebook  
-add
-openpyxl 3.0.6  
-font SimHei
+Based on Jupyter/DataScience-Notebook  
+add  openpyxl 3.0.6  
+add  font SimHei
