@@ -27,6 +27,7 @@ RUN conda install --quiet --yes \
     'xmltodict=0.12.*' \
     'xlwt=1.3.*' \
     'pymssql=2.1.*' \
+    'squarify=0.4.*' \
     && \
     conda clean --all -f -y && \
     npm cache clean --force && \
